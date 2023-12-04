@@ -25,18 +25,7 @@ if (isset($_REQUEST['submit'])) {
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>Hotel Booking</title>
-
-  <!-- Bootstrap -->
-
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
     $(function() {
       $(".datepicker").datepicker({
@@ -48,14 +37,12 @@ if (isset($_REQUEST['submit'])) {
   <style>
     .container {
       max-width: 400px;
-      /* Adjust the max-width as needed */
       margin: 0 auto;
       padding: 20px;
       background-color: #fff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       border-radius: 5px;
       margin-top: 50px;
-      /* Adjust the top margin as needed */
       margin-bottom: 50px;
     }
 
@@ -151,8 +138,8 @@ if (isset($_REQUEST['submit'])) {
           <input type="text" class="datepicker" name="checkout">
         </div>
         <div class="form-group">
-          <label for="name">Enter Your Full Name:</label>
-          <input type="text" class="form-control" name="name" placeholder="Enter your full name here" required>
+          <label for="name">Enter Your Email:</label>
+          <input type="text" class="form-control" name="name" placeholder="Enter your email here" required>
         </div>
         <div class="form-group">
           <label for="phone">Enter Your Phone Number:</label>
@@ -177,20 +164,6 @@ if (isset($_REQUEST['submit'])) {
 
   </div>
 
-
-
-
-
-
-
-
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 </body>
 

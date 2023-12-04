@@ -55,7 +55,7 @@ if (isset($_REQUEST['submit'])) {
             align-items: center;
             justify-content: center;
             height: 100vh;
-            /* This ensures the container is centered vertically on the viewport */
+            
         }
 
         .container {
@@ -68,11 +68,8 @@ if (isset($_REQUEST['submit'])) {
             padding: 20px;
             border-radius: 5px;
             max-width: 400px;
-            /* Set your desired max-width */
             width: 100%;
-            /* Ensures responsiveness */
             margin: auto;
-            /* Center horizontally */
         }
 
         .form-group {
