@@ -3,7 +3,7 @@ include_once 'class.user.php';
 $user = new User();
 if (isset($_REQUEST['submit'])) {
     extract($_REQUEST);
-    $register = $user->reg_user($fullname, $uname, $upass, $uemail);
+    $register = $user->reg_user($uname, $upass, $uemail);
     if ($register) {
         echo "
 <script type='text/javascript'>
@@ -32,10 +32,7 @@ if (isset($_REQUEST['submit'])) {
     <script language="javascript" type="text/javascript">
         function submitreg() {
             var form = document.reg;
-            if (form.name.value == "") {
-                alert("Enter Name.");
-                return false;
-            } else if (form.uname.value == "") {
+            if (form.uname.value == "") {
                 alert("Enter username.");
                 return false;
             } else if (form.upass.value == "") {
@@ -123,10 +120,6 @@ if (isset($_REQUEST['submit'])) {
             <h2>Add Your Manager</h2>
             <hr>
             <form action="" method="post" name="reg">
-                <div class="form-group">
-                    <label for="fullname">Full Name:</label>
-                    <input type="text" class="form-control" name="fullname" placeholder="example: Prabhashana Jayarathne" required>
-                </div>
                 <div class="form-group">
                     <label for="uname">User Name:</label>
                     <input type="text" class="form-control" name="uname" placeholder="exmple: Sumudu1@" required>

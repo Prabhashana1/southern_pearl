@@ -9,12 +9,10 @@ if (isset($_REQUEST['submit'])) {
   $result = $user->booknow($checkin, $checkout, $name, $phone, $roomname);
   if ($result) {
     echo "<script type='text/javascript'>
-                  alert('" . $result . "');
-             </script>";
+            alert('" . $result . "');
+          </script>";
   }
 }
-
-
 ?>
 
 

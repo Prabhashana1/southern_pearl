@@ -11,14 +11,13 @@ class user
             exit;
         }
     }
-    public function reg_user($name, $username, $password, $email)
+    public function reg_user($username, $password, $email)
     {
-        //$password=md5($password);
         $sql = "SELECT * FROM manager WHERE uname='$username' OR uemail='$email'";
         $check = $this->db->query($sql);
         $count_row = $check->num_rows;
         if ($count_row == 0) {
-            $sql1 = "INSERT INTO manager SET uname='$username', upass='$password', fullname='$name', uemail='$email'";
+            $sql1 = "INSERT INTO manager SET uname='$username', upass='$password', uemail='$email'";
             $result = mysqli_query($this->db, $sql1) or die(mysqli_connect_errno() . "Data cannot inserted");
             return $result;
         } else {
@@ -63,8 +62,7 @@ class user
     public function booknow($checkin, $checkout, $email, $phone, $roomname)
     {
 
-        $sql = "SELECT * FROM rooms WHERE room_cat='$roomname' AND (room_id NOT IN (SELECT DISTINCT room_id
-   FROM rooms WHERE checkin <= '$checkin' AND checkout >='$checkout'))";
+        $sql = "SELECT * FROM rooms WHERE room_cat='$roomname' AND (room_id NOT IN (SELECT DISTINCT room_id FROM rooms WHERE checkin <= '$checkin' AND checkout >='$checkout'))";
         $check = mysqli_query($this->db, $sql)  or die(mysqli_connect_errno() . "Data herecannot inserted");;
 
         if (mysqli_num_rows($check) > 0) {
@@ -149,7 +147,6 @@ class user
 
     public function check_login($emailusername, $password)
     {
-        //$password=md5($password);
         $sql2 = "SELECT uid from manager WHERE uemail='$emailusername' OR uname='$emailusername' and upass='$password'";
         $result = mysqli_query($this->db, $sql2);
         $user_data = mysqli_fetch_array($result);

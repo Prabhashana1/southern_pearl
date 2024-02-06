@@ -49,7 +49,7 @@
          <a href="https://www.pinterest.com/login/" class="fab fa-pinterest"></a>
       </div>
 
-      <div class="credit">&copy; copyright @ 2023 by <span>Prabhashana Jayarathne</span></div>
+      <div class="credit">&copy; copyright @ 2024 by <span>Prabhashana Jayarathne</span></div>
 
    </section>
 
